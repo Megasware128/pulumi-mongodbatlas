@@ -96,7 +96,6 @@ jobs:
         team-reviewers: platform-integrations
         title: Update ${{ env.UPSTREAM_PROVIDER_REPO }} to v${{
           github.event.inputs.version }}
-        token: ${{ secrets.PULUMI_BOT_TOKEN }}
     - if: ${{ github.event.inputs.linked_issue_number }}
       name: Create PR (with linked issue)
       uses: peter-evans/create-pull-request@v3.12.0
