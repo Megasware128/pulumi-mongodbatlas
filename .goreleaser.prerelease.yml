@@ -7,12 +7,11 @@ before:
   hooks:
   - make tfgen
 blobs:
-- bucket: get.pulumi.com
+- bucket: my-blob-container
   folder: releases/plugins/
   ids:
   - archive
-  provider: s3
-  region: us-west-2
+  provider: azblob
 builds:
 - binary: pulumi-resource-mongodbatlas
   dir: provider
